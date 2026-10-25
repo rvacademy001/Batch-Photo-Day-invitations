@@ -149,7 +149,7 @@ function fireGrandCelebration() {
     const count = 220;
     const defaults = {
         origin: { y: 0.7 },
-        colors: ['#e6b749', '#10b981', '#047857', '#ffd700', '#ffffff', '#22c55e']
+        colors: ['#f5c042', '#10b981', '#38bdf8', '#c084fc', '#fb7185', '#ffffff', '#ffd700']
     };
 
     function fire(particleRatio, opts) {
@@ -223,9 +223,9 @@ function initCalendarLink() {
     const calBtn = document.getElementById('google-calendar-btn');
     if (!calBtn) return;
 
-    const title = encodeURIComponent("Ceremonial Batch Photograph 2023 - Department of Social Sciences (OUSL)");
+    const title = encodeURIComponent("Grand Batch Photograph 2023 - Department of Social Sciences (OUSL)");
     const details = encodeURIComponent(
-        "Official Ceremonial Invitation to the Grand Batch Photograph 2023.\n\nHonoring: Respected Vice-Chancellor, Dean of FHSS, Heads of Departments, and Academic Staff.\nHost: Faculty of Humanities & Social Sciences Students' Union & The Batch of 2023, Department of Social Sciences.\n\nDate: December 13, 2026\nTime: 7:00 AM Sharp\nVenue: HSS Faculty Premises, The Open University of Sri Lanka, Nawala."
+        "Official Invitation to the Grand Batch Photograph 2023 of the Department of Social Sciences, Faculty of Humanities & Social Sciences, The Open University of Sri Lanka.\n\nDate: December 13, 2026\nTime: 7:00 AM Sharp\nVenue: HSS Faculty Premises, Nawala Central Campus.\nOrganized by the FHSS Students' Union."
     );
     const location = encodeURIComponent("Faculty of Humanities and Social Sciences, The Open University of Sri Lanka, Nawala");
 
@@ -238,7 +238,7 @@ function initCalendarLink() {
 }
 
 /* ===================================================================
-   6. DIGNITARY RSVP MODAL & SUBMISSION
+   6. RSVP MODAL & SUBMISSION
    =================================================================== */
 function initRSVPModal() {
     const openBtn = document.getElementById('open-rsvp-btn');
@@ -267,15 +267,15 @@ function initRSVPModal() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const role = document.getElementById('dignitary-role').value;
-            const name = document.getElementById('student-name').value;
-            const phone = document.getElementById('contact-phone').value;
-            const attending = document.getElementById('diet-pref').value;
+            const name = document.getElementById('student-name') ? document.getElementById('student-name').value : '';
+            const studentId = document.getElementById('student-id') ? document.getElementById('student-id').value : '';
+            const phone = document.getElementById('contact-phone') ? document.getElementById('contact-phone').value : '';
+            const attending = document.getElementById('diet-pref') ? document.getElementById('diet-pref').value : '';
 
             // Save RSVP locally
-            const rsvpData = { role, name, phone, attending, timestamp: new Date().toISOString() };
+            const rsvpData = { name, studentId, phone, attending, timestamp: new Date().toISOString() };
             try {
-                localStorage.setItem('ousl_dignitary_rsvp_2026', JSON.stringify(rsvpData));
+                localStorage.setItem('ousl_batch_photo_rsvp_2026', JSON.stringify(rsvpData));
             } catch (err) {
                 console.log(err);
             }
@@ -286,10 +286,10 @@ function initRSVPModal() {
             playCelebrationFanfare();
             if (typeof confetti === 'function') {
                 confetti({
-                    particleCount: 120,
+                    particleCount: 140,
                     spread: 85,
                     origin: { y: 0.5 },
-                    colors: ['#e6b749', '#10b981', '#ffd700', '#ffffff']
+                    colors: ['#e6b749', '#10b981', '#38bdf8', '#c084fc', '#ffffff']
                 });
             }
 
@@ -314,8 +314,8 @@ function initShareButton() {
 
     shareBtn.addEventListener('click', async () => {
         const shareData = {
-            title: "VIP Invitation: Grand Batch Photograph 2023 | FHSS - OUSL",
-            text: "Official Dignitary Invitation: You are respectfully invited to grace the Ceremonial Batch Photograph 2023 of the Department of Social Sciences, Faculty of Humanities & Social Sciences, The Open University of Sri Lanka on December 13, 2026 at 7:00 AM at the HSS Faculty Premises.",
+            title: "Grand Batch Photograph 2023 | Department of Social Sciences - OUSL",
+            text: "You are invited to the Grand Batch Photograph 2023 of the Department of Social Sciences, Faculty of Humanities & Social Sciences, The Open University of Sri Lanka on December 13, 2026 at 7:00 AM at the HSS Faculty Premises!",
             url: window.location.href
         };
 
@@ -373,12 +373,14 @@ function initAmbientParticles() {
             this.opacity = Math.random() * 0.65 + 0.2;
             this.fadeSpeed = Math.random() * 0.007 + 0.003;
 
-            // Color alternates between Imperial Gold and Emerald Sparkle
+            // Color alternates between Gold, Emerald, Cyan and Rose Sparkle
             const rand = Math.random();
-            if (rand > 0.55) {
-                this.color = '230, 183, 73'; // Imperial Gold
-            } else if (rand > 0.25) {
+            if (rand > 0.6) {
+                this.color = '245, 192, 66'; // Imperial Gold
+            } else if (rand > 0.35) {
                 this.color = '16, 185, 129'; // Emerald Green
+            } else if (rand > 0.15) {
+                this.color = '56, 189, 248'; // Cyan Blue
             } else {
                 this.color = '255, 255, 255'; // Diamond Star
             }

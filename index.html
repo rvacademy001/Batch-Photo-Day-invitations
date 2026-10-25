@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Invitation | Ceremonial Batch Photograph 2023 - Department of Social Sciences, OUSL</title>
-    <!-- Google Fonts: Diverse editorial typefaces for an authentic bespoke look -->
+    <title>Grand Batch Photograph 2023 | Department of Social Sciences - OUSL</title>
+    <!-- Google Fonts: Diverse artistic typefaces -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Canvas Confetti -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating Background Canvas for Ambient Gold Sparkles -->
+    <!-- Floating Background Canvas for Ambient Glowing Sparkles -->
     <canvas id="ambient-canvas"></canvas>
 
     <!-- Sound Control Floating Button -->
@@ -25,42 +25,45 @@
 
     <!-- Confetti Party Button -->
     <button id="confetti-btn" class="floating-btn confetti-toggle" title="Celebrate!">
-        <i class="fa-solid fa-sparkles"></i>
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
         <span>Celebrate</span>
     </button>
 
     <!-- INTRO ENVELOPE / REVEAL SCREEN -->
     <div id="envelope-overlay" class="envelope-overlay">
         <div class="envelope-wrapper">
-            <div class="vip-sash">
-                <span>ESTEEMED DIGNITARY INVITATION</span>
+            <div class="festive-sash">
+                <i class="fa-solid fa-camera"></i>
+                <span>CLASS OF 2023 • OFFICIAL INVITATION</span>
+                <i class="fa-solid fa-camera"></i>
             </div>
             <div class="envelope-container" id="envelope">
                 <div class="envelope-flap"></div>
                 <div class="envelope-pocket">
                     <div class="wax-seal" id="wax-seal">
                         <div class="seal-inner">
-                            <i class="fa-solid fa-award"></i>
-                            <span>OUSL</span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>2023</span>
                         </div>
                     </div>
                 </div>
                 <div class="letter-preview">
-                    <div class="preview-header-line">OFFICIAL INVITATION</div>
+                    <div class="preview-tag-colored">BATCH PHOTOGRAPH</div>
                     <div class="preview-crest">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                        <i class="fa-solid fa-building-columns"></i>
                     </div>
-                    <h3>Faculty of Humanities & Social Sciences</h3>
-                    <p class="preview-sub">The Open University of Sri Lanka</p>
-                    <div class="preview-badge">FOR ESTEEMED GUESTS & FACULTY</div>
-                    <p class="preview-date">December 13, 2026 • 7:00 AM</p>
+                    <h3>Department of Social Sciences</h3>
+                    <p class="preview-sub">Faculty of Humanities & Social Sciences • OUSL</p>
+                    <div class="preview-date-badge">
+                        <i class="fa-regular fa-calendar-days"></i> December 13, 2026 • 7:00 AM
+                    </div>
                 </div>
             </div>
             <div class="open-instruction">
                 <button id="open-card-btn" class="glow-button">
-                    <i class="fa-solid fa-envelope-open-text"></i> Open Distinguished Invitation
+                    <i class="fa-solid fa-envelope-open-text"></i> Open Your Invitation
                 </button>
-                <p class="instruction-text">Tap the wax seal or button to unveil the formal invitation</p>
+                <p class="instruction-text">Click the wax seal or button to unfold the memories</p>
             </div>
         </div>
     </div>
@@ -68,18 +71,23 @@
     <!-- MAIN INVITATION CONTENT -->
     <main id="main-content" class="main-content hidden">
 
-        <!-- Top Academic Banner / Dignitary Ribbon -->
-        <div class="academic-ribbon">
-            <span class="ribbon-text"><i class="fa-solid fa-landmark"></i> The Open University of Sri Lanka • Nawala Central Campus</span>
+        <!-- Top Celebratory Announcement Bar -->
+        <div class="top-announcement-bar">
+            <span class="bar-pill-glow">
+                <i class="fa-solid fa-sparkles"></i> The Landmark Milestone of Class 2023
+            </span>
+            <span class="bar-location">
+                <i class="fa-solid fa-location-dot"></i> HSS Faculty Premises • The Open University of Sri Lanka
+            </span>
         </div>
 
         <!-- Hero Section / Invitation Header -->
         <header class="invite-header">
-            <!-- Asymmetric Angled Stamp -->
+            <!-- Vintage Artistic Heritage Stamp -->
             <div class="heritage-stamp">
                 <span class="stamp-circ">OUSL • FHSS</span>
                 <span class="stamp-year">2023</span>
-                <span class="stamp-sub">CEREMONIAL</span>
+                <span class="stamp-sub">SOCIAL SCI</span>
             </div>
 
             <div class="institution-branding">
@@ -91,49 +99,57 @@
                 <h4 class="uni-name">The Open University of Sri Lanka</h4>
                 <h3 class="faculty-name">Faculty of Humanities & Social Sciences</h3>
                 <div class="society-tag">
-                    <i class="fa-solid fa-feather-pointed"></i> Organized with Deep Respect by the FHSS Students' Union
+                    <i class="fa-solid fa-users"></i> Organized by the FHSS Students' Union
                 </div>
             </div>
 
             <div class="invitation-lead">
-                <p class="calligraphy-script">Respectfully requesting the honor of the presence of</p>
-
-                <!-- Dignitary Honour Box -->
-                <div class="dignitary-card">
-                    <div class="dignitary-badge-slant">GUESTS OF HONOR</div>
-                    <h2 class="dignitary-roles">
-                        <span>The Respected Vice-Chancellor</span>
-                        <span class="bullet-dot">•</span>
-                        <span>The Dean of the Faculty</span>
-                        <span class="bullet-dot">•</span>
-                        <span>Heads of Departments</span>
-                        <span class="bullet-dot">•</span>
-                        <span>Esteemed Senior Lecturers & Academic Mentors</span>
-                    </h2>
-                </div>
-
-                <p class="calligraphy-sub">to grace the auspicious occasion of the</p>
+                <p class="calligraphy-script">You are Cordially Invited to</p>
 
                 <div class="title-lockup">
-                    <div class="slant-tag left">CEREMONIAL EVENT</div>
+                    <div class="slant-tag left">OFFICIAL PORTRAITS</div>
                     <h1 class="main-title">
                         <span class="title-script-lead">The Grand</span>
                         <span class="gradient-text">BATCH PHOTOGRAPH</span>
                         <span class="year-badge">CLASS OF 2023</span>
                     </h1>
-                    <div class="slant-tag right">MEMORIES FOR ETERNITY</div>
+                    <div class="slant-tag right">CAPTURE ETERNITY</div>
                 </div>
 
                 <div class="dept-badge">
-                    <i class="fa-solid fa-book-open-reader"></i>
+                    <i class="fa-solid fa-graduation-cap"></i>
                     <span>Department of Social Sciences</span>
                 </div>
 
-                <p class="honor-dedication">
-                    "In profound gratitude to our visionary academic leaders and mentors who sculpted our minds and guided our journey through the halls of social enquiry."
+                <p class="motto-text">
+                    "Every lecture shared, every laugh echoed, and every hurdle conquered culminates into this timeless photograph. Come join us to preserve our legacy."
                 </p>
             </div>
         </header>
+
+        <!-- PHOTO SHOWCASE BANNER (Polaroid Visuals) -->
+        <section class="polaroid-banner-section">
+            <div class="polaroid-wrapper">
+                <div class="polaroid-card polaroid-1">
+                    <div class="polaroid-img-box">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=80" alt="Graduation Joy">
+                    </div>
+                    <p class="polaroid-caption">Timeless Memories <i class="fa-solid fa-heart"></i></p>
+                </div>
+                <div class="polaroid-card polaroid-2">
+                    <div class="polaroid-img-box">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=700&q=80" alt="Academic Fellowship">
+                    </div>
+                    <p class="polaroid-caption">Social Sciences '23 <i class="fa-solid fa-sparkles"></i></p>
+                </div>
+                <div class="polaroid-card polaroid-3">
+                    <div class="polaroid-img-box">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=80" alt="Milestone Moments">
+                    </div>
+                    <p class="polaroid-caption">A Golden Chapter <i class="fa-solid fa-star"></i></p>
+                </div>
+            </div>
+        </section>
 
         <!-- Countdown Timer Section -->
         <section class="section-container countdown-section">
@@ -143,11 +159,11 @@
             <div class="corner-ornament bottom-right"></div>
 
             <div class="asymmetric-badge-container">
-                <span class="badge-angled"><i class="fa-regular fa-calendar-check"></i> OFFICIAL CEREMONY COUNTDOWN</span>
+                <span class="badge-angled"><i class="fa-regular fa-clock"></i> COUNTDOWN TO THE HISTORIC DAY</span>
             </div>
 
             <h2 class="section-title">
-                Counting Down To The Ceremonial Gathering
+                Counting Down Every Moment
             </h2>
             <p class="countdown-subtext">Sunday, December 13, 2026 • 7:00 AM at HSS Faculty Premises</p>
 
@@ -172,7 +188,7 @@
 
             <div class="event-status-pill">
                 <span class="pulse-dot"></span>
-                <span>We await your gracious presence to bless our graduation memory</span>
+                <span>Get your attire ready! The cameras await your arrival</span>
             </div>
         </section>
 
@@ -181,302 +197,261 @@
             <div class="corner-ornament top-left"></div>
             <div class="corner-ornament top-right"></div>
             <h2 class="section-title">
-                <i class="fa-solid fa-compass"></i> Ceremonial Particulars
+                <i class="fa-solid fa-circle-info"></i> Event Particulars
             </h2>
             <div class="details-grid">
                 <!-- Date -->
-                <div class="detail-card tilt-card-left">
-                    <div class="card-icon-box">
+                <div class="detail-card tilt-card-left card-highlight-gold">
+                    <div class="card-icon-box gold">
                         <i class="fa-solid fa-calendar-star"></i>
                     </div>
-                    <h3>Date of Ceremony</h3>
+                    <h3>Date</h3>
                     <p class="card-primary">December 13, 2026</p>
                     <p class="card-secondary">Sunday Morning</p>
-                    <span class="card-meta"><i class="fa-solid fa-circle-check"></i> Official Milestone</span>
+                    <span class="card-meta gold"><i class="fa-solid fa-check"></i> Save The Date</span>
                 </div>
 
                 <!-- Time -->
-                <div class="detail-card tilt-card-center">
-                    <div class="card-icon-box">
+                <div class="detail-card tilt-card-center card-highlight-emerald">
+                    <div class="card-icon-box emerald">
                         <i class="fa-solid fa-clock-nine"></i>
                     </div>
-                    <h3>Reporting & Reception</h3>
+                    <h3>Reporting Time</h3>
                     <p class="card-primary">07:00 AM Sharp</p>
-                    <p class="card-secondary">Early morning lighting & assembly</p>
-                    <span class="card-meta gold"><i class="fa-solid fa-bell"></i> Dignitary Welcome</span>
+                    <p class="card-secondary">Morning golden lighting session</p>
+                    <span class="card-meta emerald"><i class="fa-solid fa-bell"></i> Punctuality Appreciated</span>
                 </div>
 
                 <!-- Venue -->
-                <div class="detail-card tilt-card-right">
-                    <div class="card-icon-box">
+                <div class="detail-card tilt-card-right card-highlight-blue">
+                    <div class="card-icon-box blue">
                         <i class="fa-solid fa-landmark-dome"></i>
                     </div>
-                    <h3>Ceremonial Venue</h3>
+                    <h3>Venue</h3>
                     <p class="card-primary">HSS Faculty Premises</p>
-                    <p class="card-secondary">Faculty of Humanities & Social Sciences, Nawala Centre</p>
+                    <p class="card-secondary">Faculty of Humanities & Social Sciences, Nawala</p>
                     <a href="https://maps.google.com/?q=Faculty+of+Humanities+and+Social+Sciences+Open+University+of+Sri+Lanka+Nawala" target="_blank" class="card-link">
-                        <i class="fa-solid fa-diamond-turn-right"></i> Navigate with Google Maps
+                        <i class="fa-solid fa-diamond-turn-right"></i> Open Google Maps
                     </a>
                 </div>
 
-                <!-- Host & Delegates -->
-                <div class="detail-card tilt-card-left">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-users-rays"></i>
+                <!-- Audience -->
+                <div class="detail-card tilt-card-left card-highlight-purple">
+                    <div class="card-icon-box purple">
+                        <i class="fa-solid fa-users-viewfinder"></i>
                     </div>
-                    <h3>Organized For</h3>
+                    <h3>Delegates</h3>
                     <p class="card-primary">Class of 2023</p>
-                    <p class="card-secondary">Department of Social Sciences</p>
-                    <span class="card-meta"><i class="fa-solid fa-award"></i> FHSS Students' Union</span>
+                    <p class="card-secondary">Dept. of Social Sciences, FHSS</p>
+                    <span class="card-meta purple"><i class="fa-solid fa-graduation-cap"></i> Complete Batch</span>
                 </div>
             </div>
         </section>
 
-        <!-- Itinerary / Schedule Section for Dignitaries & Students -->
-        <section class="section-container timeline-section">
-            <div class="corner-ornament top-left"></div>
-            <div class="corner-ornament top-right"></div>
-            <h2 class="section-title">
-                <i class="fa-solid fa-scroll"></i> Order of Ceremonies
-            </h2>
-            <p class="section-subtitle">Specially arranged to honor our esteemed Vice-Chancellor, Dean, and Academic Faculty</p>
-
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-dot"><i class="fa-solid fa-door-open"></i></div>
-                    <div class="timeline-content">
-                        <span class="time-stamp">07:00 AM – 07:30 AM</span>
-                        <h4>Dignitary Reception & Student Assembly</h4>
-                        <p>Welcome reception of the Respected Vice-Chancellor, Dean, Department Heads, and Academic Staff at the HSS Faculty lounge.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="timeline-content">
-                        <span class="time-stamp">07:30 AM – 08:00 AM</span>
-                        <h4>Academic Robing & Seating Protocol</h4>
-                        <p>Formal academic robing for dignitaries and batch seating arrangement on the ceremonial stage.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-dot highlight-dot"><i class="fa-solid fa-camera-retro"></i></div>
-                    <div class="timeline-content highlight-content">
-                        <div class="ribbon-mini">MAIN OCCASION</div>
-                        <span class="time-stamp gold-tag">08:00 AM – 09:30 AM</span>
-                        <h4>The Official Grand Batch Photograph 2023</h4>
-                        <p>The monumental group portrait uniting the Vice-Chancellor, Dean of FHSS, Head of Social Sciences, Faculty Members, and the entire 2023 graduating cohort.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-dot"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <div class="timeline-content">
-                        <span class="time-stamp">09:30 AM – 10:30 AM</span>
-                        <h4>Departmental Portraits & Faculty Tributes</h4>
-                        <p>Department-wise memorial photographs, lecturer appreciation moments, and portrait tokens with student groups.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-dot"><i class="fa-solid fa-mug-hot"></i></div>
-                    <div class="timeline-content">
-                        <span class="time-stamp">10:30 AM Onwards</span>
-                        <h4>Fellowship Tea & Networking</h4>
-                        <p>Dignitary fellowship breakfast and refreshments hosted by the FHSS Students' Union in honor of the visiting guests.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Dress Code / Attire Protocols Section -->
-        <section class="section-container guidelines-section">
+        <!-- DRESS CODE VISUAL PHOTO SHOWCASE (Graphics for Boys & Girls) -->
+        <section class="section-container dresscode-section">
             <div class="corner-ornament top-left"></div>
             <div class="corner-ornament top-right"></div>
             <div class="corner-ornament bottom-left"></div>
             <div class="corner-ornament bottom-right"></div>
 
             <div class="asymmetric-badge-container">
-                <span class="badge-angled-alt"><i class="fa-solid fa-palette"></i> OFFICIAL ATTIRE CODE</span>
+                <span class="badge-angled-alt"><i class="fa-solid fa-shirt"></i> OFFICIAL ATTIRE & DRESS CODE</span>
             </div>
 
             <h2 class="section-title">
-                Prescribed Attire Guidelines
+                Prescribed Dress Code
             </h2>
-            <p class="section-subtitle">Preserving the grandeur and elegance of the historic Class of 2023</p>
+            <p class="section-subtitle">Please strictly adhere to the batch dress code to create a unified, breathtaking portrait</p>
 
-            <div class="dresscode-showcase">
-                <!-- For Boys Card -->
-                <div class="dress-card gentlemen-card">
-                    <div class="dress-header">
-                        <div class="dress-icon">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <div>
-                            <span class="dress-for-tag">FOR GENTLEMEN</span>
-                            <h3>Male Students</h3>
+            <div class="dresscode-visual-grid">
+                <!-- For Boys Visual Card -->
+                <div class="attire-visual-card boys-theme">
+                    <div class="attire-image-container">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Gentlemen Formal Attire">
+                        <div class="attire-badge-overlay">
+                            <i class="fa-solid fa-user-tie"></i> FOR BOYS
                         </div>
                     </div>
-                    <div class="dress-checklist">
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>White Shirt</strong>
-                                <span>Crisp formal long-sleeve white shirt</span>
-                            </div>
+                    <div class="attire-details">
+                        <h3>Gentlemen's Attire</h3>
+                        <div class="attire-tag-list">
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> White Shirt</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Black Pants</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Black Shoes</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Black Necktie</span>
+                            <span class="attire-chip highlight-chip"><i class="fa-solid fa-plus"></i> A Blazer <em>(if you have one)</em></span>
                         </div>
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>Black Pants</strong>
-                                <span>Well-tailored black formal trousers</span>
-                            </div>
-                        </div>
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>Black Shoes</strong>
-                                <span>Polished formal black shoes & dark socks</span>
-                            </div>
-                        </div>
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>Black Necktie</strong>
-                                <span>Standard formal black tie</span>
-                            </div>
-                        </div>
-                        <div class="dress-item optional-item">
-                            <i class="fa-solid fa-circle-plus"></i>
-                            <div>
-                                <strong>A Blazer</strong>
-                                <span>Dark formal blazer / coat <em>(if you have one)</em></span>
-                            </div>
-                        </div>
+                        <p class="attire-note">Smart, sophisticated black and white formal styling for a sharp group appearance.</p>
                     </div>
                 </div>
 
-                <!-- For Girls Card -->
-                <div class="dress-card ladies-card">
-                    <div class="dress-header">
-                        <div class="dress-icon">
-                            <i class="fa-solid fa-person-dress"></i>
-                        </div>
-                        <div>
-                            <span class="dress-for-tag">FOR LADIES</span>
-                            <h3>Female Students</h3>
+                <!-- For Girls Visual Card -->
+                <div class="attire-visual-card girls-theme">
+                    <div class="attire-image-container">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Ladies White Saree">
+                        <div class="attire-badge-overlay saree-badge">
+                            <i class="fa-solid fa-person-dress"></i> FOR GIRLS
                         </div>
                     </div>
-                    <div class="dress-checklist">
-                        <div class="dress-item main-saree-item">
-                            <i class="fa-solid fa-sparkles"></i>
-                            <div>
-                                <strong>A White Saree</strong>
-                                <span>Graceful traditional white saree (Kandyan or Indian drape) with matching white blouse</span>
-                            </div>
+                    <div class="attire-details">
+                        <h3>Ladies' Attire</h3>
+                        <div class="attire-tag-list">
+                            <span class="attire-chip saree-chip"><i class="fa-solid fa-sparkles"></i> A White Saree</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Matching White Blouse</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Elegant Subtle Accessories</span>
+                            <span class="attire-chip"><i class="fa-solid fa-check"></i> Formal Comfortable Footwear</span>
                         </div>
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>Footwear & Accessories</strong>
-                                <span>Formal footwear suitable for photography staging; refined and subtle jewelry</span>
-                            </div>
-                        </div>
-                        <div class="dress-item">
-                            <i class="fa-solid fa-circle-check"></i>
-                            <div>
-                                <strong>Uniform Grandeur</strong>
-                                <span>A unified aesthetic reflecting the highest academic dignity of the Faculty</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dignitaries & Academic Visitors Note -->
-                <div class="dress-card dignitary-note-card">
-                    <div class="dress-header">
-                        <div class="dress-icon">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <div>
-                            <span class="dress-for-tag gold">ACADEMIC DIGNITARIES</span>
-                            <h3>Academic Staff & Guests</h3>
-                        </div>
-                    </div>
-                    <div class="dignitary-dress-body">
-                        <p><i class="fa-solid fa-quote-left"></i> Respected Vice-Chancellor, Dean, Department Heads, and Academic Mentors are warmly invited to attend in their formal academic attire / lounge suits / sarees. Academic cloaks & hoods will be arranged by the coordinating committee upon your arrival at the Faculty.</p>
+                        <p class="attire-note">Pristine white sarees creating an ethereal, culturally rich, and dignified presence.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dignitary RSVP & Digital Calendar Sync -->
+        <!-- PHOTOGRAPHY SESSION ZONES (Extra colorful graphic feature) -->
+        <section class="section-container zones-section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-camera-retro"></i> Photography Highlights & Zones
+            </h2>
+            <p class="section-subtitle">What awaits you on December 13th at the HSS Faculty arena</p>
+
+            <div class="zones-grid">
+                <div class="zone-card">
+                    <div class="zone-icon"><i class="fa-solid fa-users"></i></div>
+                    <h4>The Grand Official Batch Shot</h4>
+                    <p>The landmark group photo with our beloved batchmates and respected lecturers on the grand faculty riser.</p>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-icon"><i class="fa-solid fa-people-roof"></i></div>
+                    <h4>Department Portrait Sessions</h4>
+                    <p>Specialized photographs for each Social Sciences discipline with department mentors.</p>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-icon"><i class="fa-solid fa-face-smile-wink"></i></div>
+                    <h4>Friendship & Buddy Booths</h4>
+                    <p>Fun, candid polaroids and buddy shots with props, backdrops, and your closest campus circle.</p>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h4>Fellowship & Memories</h4>
+                    <p>Enjoy refreshments, autograph sessions, and unforgettable farewell camaraderie.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Itinerary Section -->
+        <section class="section-container timeline-section">
+            <div class="corner-ornament top-left"></div>
+            <div class="corner-ornament top-right"></div>
+            <h2 class="section-title">
+                <i class="fa-solid fa-timeline"></i> Program Itinerary
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-door-open"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">07:00 AM – 07:45 AM</span>
+                        <h4>Arrival, Registration & Token Handover</h4>
+                        <p>Welcome at the HSS Faculty reception desk, registration check-in, and receiving your photo token.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-wand-magic"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">07:45 AM – 08:30 AM</span>
+                        <h4>Attire Adjustment & Assembly Arrangement</h4>
+                        <p>Final wardrobe check, tier seating arrangements, and briefing by the student coordination committee.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot highlight-dot"><i class="fa-solid fa-camera"></i></div>
+                    <div class="timeline-content highlight-content">
+                        <span class="time-stamp gold-tag">08:30 AM – 10:00 AM</span>
+                        <h4>The Grand Batch Photograph 2023</h4>
+                        <p>The monumental group capture of the entire Class of 2023 together with academic mentors and faculty heads.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">10:00 AM – 11:30 AM</span>
+                        <h4>Sub-Group & Friendship Photo Sessions</h4>
+                        <p>Special department portraits, personal buddy captures, and scenic outdoor faculty shoots.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">11:30 AM Onwards</span>
+                        <h4>Fellowship & Refreshments</h4>
+                        <p>Sharing laughter, light bites, and celebrating our shared journey into the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions (Calendar, Directions, RSVP) -->
         <section class="section-container actions-section">
             <div class="action-banner">
-                <span class="stamp-pill">HONOR US WITH YOUR CONFIRMATION</span>
-                <h3>RSVP & Calendar Schedule</h3>
-                <p>We kindly request our respected dignitaries, lecturers, and visitors to confirm their presence to assist our ceremonial reception protocol.</p>
-
+                <span class="stamp-pill">BE PART OF THE LEGACY</span>
+                <h3>Confirm Your Spot In The Frame</h3>
+                <p>Sync with your calendar and let the organizing committee know you will be present.</p>
                 <div class="button-group">
                     <a id="google-calendar-btn" target="_blank" class="primary-action-btn">
-                        <i class="fa-brands fa-google"></i> Add to Google Calendar (Dec 13, 2026 • 7 AM)
+                        <i class="fa-brands fa-google"></i> Add to Google Calendar (Dec 13 • 7 AM)
                     </a>
                     <button id="open-rsvp-btn" class="secondary-action-btn">
-                        <i class="fa-solid fa-signature"></i> Dignitary / Guest RSVP
+                        <i class="fa-solid fa-clipboard-check"></i> RSVP Confirmation
                     </button>
                     <button id="share-btn" class="tertiary-action-btn">
-                        <i class="fa-solid fa-share-nodes"></i> Share Official Invite
+                        <i class="fa-solid fa-share-nodes"></i> Share With Batchmates
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- Dignitary RSVP Modal -->
+        <!-- RSVP Modal -->
         <div id="rsvp-modal" class="modal-overlay hidden">
             <div class="modal-card">
                 <button class="modal-close" id="close-rsvp">&times;</button>
                 <div class="modal-icon">
-                    <i class="fa-solid fa-award"></i>
+                    <i class="fa-solid fa-camera-retro"></i>
                 </div>
-                <h3>Ceremonial RSVP</h3>
-                <p class="modal-subtitle">Faculty of Humanities & Social Sciences • Batch Photograph 2023</p>
+                <h3>Confirm Your Attendance</h3>
+                <p class="modal-subtitle">Batch Photograph 2023 • Dept. of Social Sciences (OUSL)</p>
 
                 <form id="rsvp-form">
                     <div class="form-group">
-                        <label for="dignitary-role">Designation / Role</label>
-                        <select id="dignitary-role" required>
-                            <option value="vice-chancellor">Vice-Chancellor</option>
-                            <option value="dean">Dean of Faculty (FHSS)</option>
-                            <option value="head-dept">Head of Department (Social Sciences)</option>
-                            <option value="senior-lecturer">Senior Lecturer / Lecturer</option>
-                            <option value="visiting-academic">Visiting Academic / Special Guest</option>
-                            <option value="alumni-student">Student / Delegate</option>
-                        </select>
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" required placeholder="e.g. Nimasha Perera">
                     </div>
                     <div class="form-group">
-                        <label for="student-name">Full Name with Title</label>
-                        <input type="text" id="student-name" required placeholder="e.g. Prof. / Dr. / Mr. / Ms. ...">
+                        <label for="student-id">Student Reg No / NIC</label>
+                        <input type="text" id="student-id" required placeholder="e.g. S92345678">
                     </div>
                     <div class="form-group">
                         <label for="contact-phone">WhatsApp / Phone Number</label>
                         <input type="tel" id="contact-phone" required placeholder="e.g. 077 123 4567">
                     </div>
                     <div class="form-group">
-                        <label for="diet-pref">Attendance Status</label>
+                        <label for="diet-pref">Will you be in the batch photograph?</label>
                         <select id="diet-pref">
-                            <option value="attending">Accepts with Pleasure — Attending Ceremony</option>
-                            <option value="tentative">Tentative / Will confirm closer to date</option>
+                            <option value="yes">Yes, Definitely! Excited to be in the frame 🎓</option>
+                            <option value="maybe">Uncertain / Tentative</option>
                         </select>
                     </div>
                     <button type="submit" class="submit-rsvp-btn">
-                        <i class="fa-solid fa-check-double"></i> Confirm Attendance
+                        <i class="fa-solid fa-circle-check"></i> Confirm My Presence
                     </button>
                 </form>
                 <div id="rsvp-success-msg" class="success-message hidden">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <h4>We are Deeply Honored!</h4>
-                    <p>Thank you for gracing the Batch Photograph 2023 with your esteemed presence. We look forward to welcoming you at HSS Faculty on December 13, 2026 at 7:00 AM.</p>
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <h4>You're Registered for the Shot!</h4>
+                    <p>We can't wait to see you shine on December 13, 2026 at 7:00 AM at the HSS Faculty!</p>
                 </div>
             </div>
         </div>
@@ -484,14 +459,14 @@
         <!-- Footer -->
         <footer class="invite-footer">
             <div class="footer-crest">
-                <i class="fa-solid fa-building-columns"></i>
+                <i class="fa-solid fa-graduation-cap"></i>
             </div>
-            <p class="organized-by">Humbly Presented By</p>
-            <h4>The Students' Union & The Batch of 2023</h4>
-            <p class="dept-line">Department of Social Sciences • Faculty of Humanities & Social Sciences</p>
-            <p class="uni-tag">The Open University of Sri Lanka • Nawala, Nugegoda</p>
+            <p class="organized-by">Organized with Love & Pride By</p>
+            <h4>Students' Union — Faculty of Humanities & Social Sciences</h4>
+            <p class="dept-line">Department of Social Sciences • The Open University of Sri Lanka</p>
+            <p class="uni-tag">Nawala Main Campus, Nugegoda</p>
             <div class="footer-divider"></div>
-            <p class="copy-text">Ceremonial Batch Photo 2023 • December 13, 2026 • 7:00 AM</p>
+            <p class="copy-text">Class of 2023 • Batch Photograph • December 13, 2026 • 7:00 AM</p>
         </footer>
     </main>
 

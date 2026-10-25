@@ -1,37 +1,42 @@
 /* ===================================================================
-   VIP CEREMONIAL INVITATION - STYLESHEET
+   GRAND BATCH PHOTOGRAPH 2023 - COLOURFUL & GRAPHIC STYLESHEET
    Faculty of Humanities & Social Sciences | OUSL Nawala
-   Palette: Royal Emerald Green & Imperial Gold Leaf
-   Bespoke Editorial & Asymmetric Typographic Styling
+   Palette: Vibrant Emerald Green, Imperial Gold, & Rich Colorful Accents
    =================================================================== */
 
 :root {
-    /* Emerald & Deep Forest Green Tones */
-    --green-darkest: #03100a;
-    --green-bg-dark: #061911;
-    --green-deep: #0a271b;
-    --green-surface: rgba(12, 43, 31, 0.78);
-    --green-surface-hover: rgba(18, 63, 46, 0.9);
-    --green-accent: #196b4b;
+    /* Base Green Shades */
+    --green-darkest: #04120a;
+    --green-bg-dark: #071f14;
+    --green-surface: rgba(10, 36, 24, 0.78);
+    --green-surface-hover: rgba(16, 52, 36, 0.9);
     --green-emerald: #10b981;
-    --green-glow: rgba(16, 185, 129, 0.25);
+    --green-jade: #059669;
+    --green-mint: #34d399;
+    --green-glow: rgba(16, 185, 129, 0.35);
 
-    /* Imperial Gold Leaf & Brass Tones */
-    --gold-primary: #e6b749;
-    --gold-secondary: #c99326;
-    --gold-light: #fae49e;
-    --gold-pale: #fff6db;
-    --gold-border: rgba(230, 183, 73, 0.38);
-    --gold-glow: rgba(230, 183, 73, 0.3);
-    --gold-foil: linear-gradient(135deg, #f9e192 0%, #e6b749 40%, #b8860b 80%, #ffd978 100%);
+    /* Imperial Gold Accents */
+    --gold-primary: #f5c042;
+    --gold-secondary: #d4981d;
+    --gold-light: #ffea9f;
+    --gold-border: rgba(245, 192, 66, 0.4);
+    --gold-glow: rgba(245, 192, 66, 0.35);
+    --gold-foil: linear-gradient(135deg, #ffe79a 0%, #f5c042 45%, #b8860b 80%, #ffd366 100%);
 
-    /* Text & Contrasts */
-    --text-white: #fcfdfd;
-    --text-parchment: #e9efe8;
-    --text-muted: #b7c7be;
-    --text-sub: #879f93;
+    /* Vibrant Multi-Color Accents */
+    --vivid-blue: #38bdf8;
+    --vivid-purple: #c084fc;
+    --vivid-rose: #fb7185;
+    --vivid-orange: #fb923c;
+    --vivid-amber: #fbbf24;
 
-    /* Typographic Diversity */
+    /* Text */
+    --text-white: #ffffff;
+    --text-parchment: #f0fdf4;
+    --text-muted: #cbd5e1;
+    --text-sub: #94a3b8;
+
+    /* Fonts */
     --font-royal: 'Cinzel Decorative', serif;
     --font-heading: 'Cinzel', serif;
     --font-editorial: 'Playfair Display', serif;
@@ -62,15 +67,17 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    /* Rich Emerald Atmosphere with Gold Light Accents */
+    /* Rich, Colourful Ambient Lighting over Deep Emerald Base */
     background-image: 
-        radial-gradient(circle at 12% 18%, rgba(230, 183, 73, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 88% 82%, rgba(25, 107, 75, 0.28) 0%, transparent 55%),
-        radial-gradient(circle at 50% 40%, rgba(10, 39, 27, 0.95) 0%, #03100a 100%);
+        radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(245, 192, 66, 0.2) 0%, transparent 45%),
+        radial-gradient(circle at 50% 60%, rgba(56, 189, 248, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 85%, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(7, 31, 20, 0.95) 0%, #04120a 100%);
     background-attachment: fixed;
 }
 
-/* Background Canvas for Ambient Gold Dust Particles */
+/* Background Canvas */
 #ambient-canvas {
     position: fixed;
     top: 0;
@@ -85,7 +92,7 @@ body {
 .floating-btn {
     position: fixed;
     z-index: 999;
-    background: rgba(6, 25, 17, 0.88);
+    background: rgba(7, 31, 20, 0.88);
     backdrop-filter: blur(12px);
     border: 1px solid var(--gold-border);
     color: var(--gold-light);
@@ -102,9 +109,9 @@ body {
 
 .floating-btn:hover {
     transform: translateY(-3px) scale(1.05);
-    background: var(--gold-secondary);
-    color: #03100a;
-    box-shadow: 0 6px 25px rgba(230, 183, 73, 0.6);
+    background: var(--gold-foil);
+    color: #04120a;
+    box-shadow: 0 6px 25px rgba(245, 192, 66, 0.6);
 }
 
 .sound-toggle {
@@ -129,7 +136,7 @@ body {
 
 @keyframes gentle-pulse {
     0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px var(--gold-glow); }
-    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(230, 183, 73, 0.6); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(245, 192, 66, 0.6); }
 }
 
 /* ===================================================================
@@ -139,7 +146,7 @@ body {
 .envelope-overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at center, #0a281c 0%, #03100a 100%);
+    background: radial-gradient(circle at center, #0b2d1d 0%, #031008 100%);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -160,33 +167,33 @@ body {
     align-items: center;
     max-width: 480px;
     width: 100%;
-    position: relative;
 }
 
-/* Dignitary Sash */
-.vip-sash {
-    background: var(--gold-foil);
-    color: #03100a;
+.festive-sash {
+    background: linear-gradient(90deg, #10b981, #f5c042, #38bdf8);
+    color: #04120a;
     font-family: var(--font-heading);
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     font-weight: 800;
-    letter-spacing: 2.5px;
-    padding: 6px 24px;
-    border-radius: 4px;
+    letter-spacing: 2px;
+    padding: 7px 22px;
+    border-radius: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     margin-bottom: 20px;
     transform: rotate(-2deg);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .envelope-container {
     position: relative;
     width: 370px;
     height: 255px;
-    background: #092419;
-    border-radius: 12px;
-    border: 1px solid rgba(230, 183, 73, 0.5);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 45px rgba(230, 183, 73, 0.25);
+    background: #092a1c;
+    border-radius: 14px;
+    border: 1px solid rgba(245, 192, 66, 0.5);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 45px rgba(16, 185, 129, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,7 +215,7 @@ body {
     height: 0;
     border-left: 185px solid transparent;
     border-right: 185px solid transparent;
-    border-top: 135px solid #0f3826;
+    border-top: 135px solid #0f3d28;
     z-index: 4;
     transform-origin: top;
     transition: transform 0.8s ease;
@@ -221,21 +228,20 @@ body {
     left: 0;
     width: 0;
     height: 0;
-    border-left: 185px solid #09261a;
-    border-right: 185px solid #09261a;
-    border-bottom: 125px solid #134630;
+    border-left: 185px solid #082619;
+    border-right: 185px solid #082619;
+    border-bottom: 125px solid #124b33;
     z-index: 5;
     pointer-events: none;
 }
 
-/* Wax Seal with Gold/Emerald Crest */
 .wax-seal {
     position: absolute;
     bottom: -42px;
     left: -42px;
     width: 84px;
     height: 84px;
-    background: radial-gradient(circle, #f5cb5c 20%, #c99326 65%, #7a5509 100%);
+    background: radial-gradient(circle, #f9df78 20%, #d4981d 65%, #7a5509 100%);
     border-radius: 50%;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.5);
     display: flex;
@@ -276,7 +282,7 @@ body {
     position: absolute;
     width: 90%;
     height: 86%;
-    background: #fbf9f2;
+    background: #ffffff;
     border-radius: 8px;
     padding: 16px;
     display: flex;
@@ -284,61 +290,56 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #072015;
+    color: #061c12;
     z-index: 2;
     box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-    border: 1px dashed #c49a37;
+    border: 2px dashed #10b981;
     transition: transform 0.8s ease;
 }
 
-.preview-header-line {
+.preview-tag-colored {
     font-family: var(--font-stamp);
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    color: #8b6514;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(90deg, #059669, #0284c7);
+    padding: 2px 10px;
+    border-radius: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
 }
 
 .preview-crest i {
-    font-size: 1.6rem;
-    color: #0f3d29;
+    font-size: 1.7rem;
+    color: #0f452e;
     margin-bottom: 4px;
 }
 
 .letter-preview h3 {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #09281b;
+    color: #061c12;
     line-height: 1.25;
 }
 
 .letter-preview .preview-sub {
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     color: #4b6656;
     margin-top: 3px;
 }
 
-.letter-preview .preview-badge {
-    margin-top: 8px;
-    background: #09261a;
-    color: var(--gold-primary);
-    padding: 4px 12px;
+.preview-date-badge {
+    margin-top: 10px;
+    background: #092a1c;
+    color: var(--gold-light);
+    padding: 5px 14px;
     border-radius: 20px;
-    font-size: 0.68rem;
+    font-size: 0.74rem;
     font-weight: 700;
-    letter-spacing: 0.8px;
 }
 
-.letter-preview .preview-date {
-    font-size: 0.72rem;
-    color: #8b6514;
-    font-weight: 600;
-    margin-top: 6px;
-}
-
-/* Open Button & Text */
+/* Open Button */
 .open-instruction {
     margin-top: 36px;
     text-align: center;
@@ -349,12 +350,12 @@ body {
 }
 
 .glow-button {
-    background: var(--gold-foil);
-    color: #04140d;
+    background: linear-gradient(135deg, #10b981 0%, #f5c042 100%);
+    color: #04120a;
     border: none;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 0.5px;
     padding: 15px 36px;
     border-radius: 50px;
@@ -362,23 +363,20 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 10px 30px rgba(230, 183, 73, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.45);
     transition: var(--transition);
 }
 
 .glow-button:hover {
     transform: translateY(-3px) scale(1.04);
-    box-shadow: 0 14px 40px rgba(230, 183, 73, 0.6);
-    filter: brightness(1.1);
+    box-shadow: 0 14px 40px rgba(245, 192, 66, 0.6);
 }
 
 .instruction-text {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-sub);
-    letter-spacing: 0.3px;
 }
 
-/* Envelope opening state */
 .envelope-container.open .envelope-flap {
     transform: rotateX(180deg);
     z-index: 1;
@@ -395,9 +393,9 @@ body {
 .main-content {
     position: relative;
     z-index: 10;
-    max-width: 1060px;
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 30px 20px 80px 20px;
+    padding: 25px 20px 80px 20px;
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
@@ -407,39 +405,51 @@ body {
     opacity: 0;
 }
 
-/* Academic Ribbon Bar */
-.academic-ribbon {
-    text-align: center;
+/* Top Announcement Bar */
+.top-announcement-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
-.ribbon-text {
-    display: inline-block;
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+.bar-pill-glow {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.25), rgba(245, 192, 66, 0.25));
+    border: 1px solid var(--gold-border);
     color: var(--gold-light);
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-weight: 600;
-    padding: 6px 20px;
-    border-radius: 40px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 30px;
+}
+
+.bar-location {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.bar-location i {
+    color: var(--vivid-rose);
 }
 
 /* Header Section */
 .invite-header {
     text-align: center;
-    padding: 40px 20px 50px 20px;
+    padding: 35px 20px 45px 20px;
     position: relative;
 }
 
-/* Vintage Heritage Postal Stamp Angled */
 .heritage-stamp {
     position: absolute;
     top: 10px;
-    right: 25px;
-    width: 90px;
-    height: 90px;
+    right: 20px;
+    width: 95px;
+    height: 95px;
     border: 2px dashed var(--gold-primary);
     border-radius: 50%;
     display: flex;
@@ -449,44 +459,39 @@ body {
     color: var(--gold-light);
     font-family: var(--font-stamp);
     transform: rotate(8deg);
-    background: rgba(230, 183, 73, 0.06);
+    background: rgba(245, 192, 66, 0.08);
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     pointer-events: none;
 }
 
 .stamp-circ {
-    font-size: 0.58rem;
+    font-size: 0.6rem;
     letter-spacing: 1px;
 }
 
 .stamp-year {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.35rem;
+    font-weight: 800;
     color: var(--gold-primary);
-    line-height: 1.1;
+    line-height: 1;
 }
 
 .stamp-sub {
-    font-size: 0.52rem;
+    font-size: 0.55rem;
     letter-spacing: 1.5px;
 }
 
-.emblem-container {
-    display: inline-block;
-    margin-bottom: 16px;
-    position: relative;
-}
-
 .emblem-ring {
-    width: 82px;
-    height: 82px;
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
     border: 2px solid var(--gold-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, rgba(230, 183, 73, 0.2) 0%, rgba(10, 39, 27, 0.9) 80%);
-    box-shadow: 0 0 25px var(--gold-glow);
+    margin: 0 auto 16px auto;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, rgba(7, 31, 20, 0.9) 80%);
+    box-shadow: 0 0 28px var(--green-glow);
 }
 
 .university-icon {
@@ -498,115 +503,57 @@ body {
     font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 600;
-    letter-spacing: 3.5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--text-parchment);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .faculty-name {
     font-family: var(--font-editorial);
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     font-weight: 600;
-    color: var(--gold-light);
-    letter-spacing: 0.5px;
-    margin-bottom: 14px;
+    color: #ffffff;
+    margin-bottom: 12px;
 }
 
 .society-tag {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(230, 183, 73, 0.12);
-    border: 1px solid var(--gold-border);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(56, 189, 248, 0.2));
+    border: 1px solid rgba(16, 185, 129, 0.4);
     padding: 7px 24px;
     border-radius: 30px;
     font-size: 0.85rem;
     color: var(--gold-light);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 35px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-/* Calligraphic Scripts */
 .calligraphy-script {
     font-family: var(--font-calligraphy);
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--gold-primary);
-    margin-bottom: 15px;
-    line-height: 1.1;
-}
-
-.calligraphy-sub {
-    font-family: var(--font-calligraphy);
-    font-size: 2.3rem;
-    color: var(--gold-primary);
-    margin: 22px 0 10px 0;
+    margin-bottom: 12px;
     line-height: 1;
 }
 
-/* Dignitary Highlight Card */
-.dignitary-card {
-    background: rgba(14, 48, 34, 0.7);
-    border: 1px solid var(--gold-border);
-    border-radius: 18px;
-    padding: 24px 30px;
-    max-width: 820px;
-    margin: 0 auto;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
-    position: relative;
-    backdrop-filter: blur(10px);
-}
-
-.dignitary-badge-slant {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-1deg);
-    background: var(--gold-foil);
-    color: #04140d;
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    padding: 4px 18px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.dignitary-roles {
-    font-family: var(--font-editorial);
-    font-size: 1.18rem;
-    font-weight: 600;
-    color: #ffffff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 8px 12px;
-    line-height: 1.6;
-}
-
-.bullet-dot {
-    color: var(--gold-primary);
-    font-size: 0.9rem;
-}
-
-/* Title Lockup with Angled Slant Tags */
 .title-lockup {
     position: relative;
     display: inline-block;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .title-script-lead {
     font-family: var(--font-calligraphy);
-    font-size: 3rem;
-    color: var(--gold-light);
+    font-size: 3.2rem;
+    color: var(--green-mint);
     display: block;
     line-height: 0.8;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .slant-tag {
@@ -615,7 +562,7 @@ body {
     font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 2px;
-    background: #11422f;
+    background: #0f3d28;
     color: var(--gold-light);
     border: 1px solid var(--gold-border);
     padding: 4px 12px;
@@ -623,45 +570,38 @@ body {
 }
 
 .slant-tag.left {
-    top: -12px;
+    top: -10px;
     left: -20px;
     transform: rotate(-6deg);
 }
 
 .slant-tag.right {
-    bottom: -10px;
+    bottom: -8px;
     right: -20px;
     transform: rotate(4deg);
 }
 
-.main-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-}
-
 .gradient-text {
     font-family: var(--font-royal);
-    font-size: clamp(2.1rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.2rem, 5.8vw, 4rem);
     font-weight: 900;
     letter-spacing: 2.5px;
-    background: linear-gradient(135deg, #ffffff 15%, #fae49e 45%, #e6b749 75%, #caa135 100%);
+    background: linear-gradient(135deg, #ffffff 15%, #ffeaa7 45%, #f5c042 75%, #10b981 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 35px rgba(230, 183, 73, 0.35);
+    text-shadow: 0 0 35px rgba(245, 192, 66, 0.35);
     line-height: 1.15;
 }
 
 .year-badge {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     letter-spacing: 9px;
     font-weight: 700;
     color: var(--gold-primary);
     border-top: 1px solid var(--gold-border);
     border-bottom: 1px solid var(--gold-border);
-    padding: 5px 28px;
+    padding: 6px 30px;
     margin-top: 4px;
 }
 
@@ -669,31 +609,99 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid rgba(230, 183, 73, 0.3);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(245, 192, 66, 0.15));
+    border: 1px solid var(--green-emerald);
     padding: 10px 28px;
     border-radius: 50px;
     font-size: 1.05rem;
     font-weight: 600;
     color: #ffffff;
     margin: 18px 0;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
 }
 
 .dept-badge i {
     color: var(--gold-primary);
-    font-size: 1.1rem;
 }
 
-.honor-dedication {
+.motto-text {
     font-family: var(--font-editorial);
     font-style: italic;
-    font-size: 1.12rem;
-    color: var(--text-muted);
-    max-width: 720px;
+    font-size: 1.15rem;
+    color: var(--text-parchment);
+    max-width: 740px;
     margin: 0 auto;
     line-height: 1.7;
-    position: relative;
-    padding: 0 25px;
+    padding: 0 20px;
+}
+
+/* ===================================================================
+   POLAROID MEMORY BANNER (Rich Photographic Graphics)
+   =================================================================== */
+
+.polaroid-banner-section {
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+.polaroid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.polaroid-card {
+    background: #ffffff;
+    padding: 12px 12px 20px 12px;
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.25);
+    transition: var(--transition);
+    width: 260px;
+    text-align: center;
+}
+
+.polaroid-1 { transform: rotate(-4deg); }
+.polaroid-2 { transform: rotate(1deg) translateY(-10px); z-index: 2; }
+.polaroid-3 { transform: rotate(4deg); }
+
+.polaroid-card:hover {
+    transform: translateY(-14px) rotate(0deg) scale(1.08);
+    z-index: 10;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px var(--gold-glow);
+}
+
+.polaroid-img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #111;
+}
+
+.polaroid-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.polaroid-card:hover .polaroid-img-box img {
+    transform: scale(1.08);
+}
+
+.polaroid-caption {
+    font-family: var(--font-calligraphy);
+    font-size: 1.7rem;
+    color: #0f3d28;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.polaroid-caption i {
+    font-size: 1.1rem;
+    color: var(--vivid-rose);
 }
 
 /* ===================================================================
@@ -708,11 +716,10 @@ body {
     border-radius: 22px;
     padding: 45px 35px;
     margin-bottom: 45px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
 }
 
-/* Decorative Gold Corner Filigree */
 .corner-ornament {
     position: absolute;
     width: 24px;
@@ -723,31 +730,11 @@ body {
     opacity: 0.6;
 }
 
-.corner-ornament.top-left {
-    top: 12px;
-    left: 12px;
-    border-width: 2px 0 0 2px;
-}
+.corner-ornament.top-left { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.corner-ornament.top-right { top: 12px; right: 12px; border-width: 2px 2px 0 0; }
+.corner-ornament.bottom-left { bottom: 12px; left: 12px; border-width: 0 0 2px 2px; }
+.corner-ornament.bottom-right { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
 
-.corner-ornament.top-right {
-    top: 12px;
-    right: 12px;
-    border-width: 2px 2px 0 0;
-}
-
-.corner-ornament.bottom-left {
-    bottom: 12px;
-    left: 12px;
-    border-width: 0 0 2px 2px;
-}
-
-.corner-ornament.bottom-right {
-    bottom: 12px;
-    right: 12px;
-    border-width: 0 2px 2px 0;
-}
-
-/* Asymmetric Angled Badges on Sections */
 .asymmetric-badge-container {
     text-align: center;
     margin-bottom: 12px;
@@ -756,10 +743,10 @@ body {
 .badge-angled {
     display: inline-block;
     background: var(--gold-foil);
-    color: #03100a;
+    color: #04120a;
     font-family: var(--font-stamp);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 2px;
     padding: 5px 18px;
     border-radius: 4px;
@@ -769,24 +756,24 @@ body {
 
 .badge-angled-alt {
     display: inline-block;
-    background: #0f3d29;
-    color: var(--gold-light);
-    border: 1px solid var(--gold-border);
+    background: linear-gradient(90deg, #10b981, #0284c7);
+    color: #ffffff;
     font-family: var(--font-stamp);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 2px;
-    padding: 5px 18px;
+    padding: 6px 20px;
     border-radius: 4px;
     transform: rotate(1.5deg);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     color: var(--gold-light);
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -802,13 +789,13 @@ body {
 }
 
 /* ===================================================================
-   COUNTDOWN TIMER WITH ARTISTIC TILT
+   COUNTDOWN TIMER WITH COLOURFUL CARDS
    =================================================================== */
 
 .countdown-subtext {
     text-align: center;
     font-family: var(--font-editorial);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-style: italic;
     color: var(--text-parchment);
     margin-bottom: 25px;
@@ -823,7 +810,7 @@ body {
 }
 
 .countdown-card {
-    background: rgba(6, 25, 17, 0.85);
+    background: rgba(4, 18, 10, 0.85);
     border: 1px solid var(--gold-border);
     border-radius: 16px;
     padding: 22px 12px;
@@ -835,22 +822,19 @@ body {
     transition: var(--transition);
 }
 
-/* Organic Asymmetric Tilts */
-.card-tilt-1 { transform: rotate(-2deg); }
-.card-tilt-2 { transform: rotate(1.5deg); }
-.card-tilt-3 { transform: rotate(-1.5deg); }
-.card-tilt-4 { transform: rotate(2deg); }
+.card-tilt-1 { transform: rotate(-2deg); border-top: 3px solid var(--gold-primary); }
+.card-tilt-2 { transform: rotate(1.5deg); border-top: 3px solid var(--green-emerald); }
+.card-tilt-3 { transform: rotate(-1.5deg); border-top: 3px solid var(--vivid-blue); }
+.card-tilt-4 { transform: rotate(2deg); border-top: 3px solid var(--vivid-purple); }
 
 .countdown-card:hover {
-    transform: translateY(-8px) rotate(0deg) scale(1.05);
-    border-color: var(--gold-primary);
-    box-shadow: 0 14px 30px rgba(230, 183, 73, 0.35);
-    background: rgba(10, 39, 27, 0.95);
+    transform: translateY(-8px) rotate(0deg) scale(1.06);
+    box-shadow: 0 14px 30px rgba(16, 185, 129, 0.35);
 }
 
 .countdown-value {
     font-family: var(--font-royal);
-    font-size: 2.7rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--gold-primary);
     line-height: 1;
@@ -858,7 +842,7 @@ body {
 
 .countdown-label {
     font-family: var(--font-stamp);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--text-muted);
@@ -870,11 +854,11 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: rgba(230, 183, 73, 0.12);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.15), rgba(245, 192, 66, 0.15));
     border: 1px solid var(--gold-border);
     padding: 10px 24px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: var(--gold-light);
     margin: 0 auto;
     width: fit-content;
@@ -886,7 +870,7 @@ body {
     height: 9px;
     background-color: var(--green-emerald);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--green-emerald);
+    box-shadow: 0 0 12px var(--green-emerald);
     animation: pulse 1.8s infinite;
 }
 
@@ -896,7 +880,7 @@ body {
 }
 
 /* ===================================================================
-   EVENT DETAILS CARDS
+   EVENT DETAILS CARDS (Colourful Highlights)
    =================================================================== */
 
 .details-grid {
@@ -906,8 +890,7 @@ body {
 }
 
 .detail-card {
-    background: rgba(6, 25, 17, 0.8);
-    border: 1px solid rgba(230, 183, 73, 0.22);
+    background: rgba(5, 22, 13, 0.85);
     border-radius: 18px;
     padding: 28px 20px;
     text-align: center;
@@ -915,36 +898,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.tilt-card-left { transform: rotate(-0.8deg); }
-.tilt-card-center { transform: rotate(0.6deg); }
-.tilt-card-right { transform: rotate(-0.5deg); }
+.card-highlight-gold { border-top: 4px solid var(--gold-primary); }
+.card-highlight-emerald { border-top: 4px solid var(--green-emerald); }
+.card-highlight-blue { border-top: 4px solid var(--vivid-blue); }
+.card-highlight-purple { border-top: 4px solid var(--vivid-purple); }
 
 .detail-card:hover {
-    background: var(--green-surface-hover);
-    border-color: var(--gold-primary);
-    transform: translateY(-7px) rotate(0deg) scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
 }
 
 .card-icon-box {
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    background: rgba(230, 183, 73, 0.14);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
     font-size: 1.5rem;
-    color: var(--gold-primary);
-    border: 1px solid rgba(230, 183, 73, 0.4);
 }
+
+.card-icon-box.gold { background: rgba(245, 192, 66, 0.15); color: var(--gold-primary); border: 1px solid var(--gold-border); }
+.card-icon-box.emerald { background: rgba(16, 185, 129, 0.15); color: var(--green-emerald); border: 1px solid var(--green-emerald); }
+.card-icon-box.blue { background: rgba(56, 189, 248, 0.15); color: var(--vivid-blue); border: 1px solid var(--vivid-blue); }
+.card-icon-box.purple { background: rgba(192, 132, 252, 0.15); color: var(--vivid-purple); border: 1px solid var(--vivid-purple); }
 
 .detail-card h3 {
     font-family: var(--font-heading);
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -967,33 +952,29 @@ body {
 
 .card-meta {
     font-size: 0.78rem;
-    color: var(--gold-light);
-    background: rgba(230, 183, 73, 0.1);
-    border: 1px solid rgba(230, 183, 73, 0.25);
-    padding: 4px 14px;
+    padding: 5px 14px;
     border-radius: 20px;
     margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}
-
-.card-meta.gold {
-    background: var(--gold-foil);
-    color: #03100a;
     font-weight: 700;
 }
 
+.card-meta.gold { background: var(--gold-foil); color: #04120a; }
+.card-meta.emerald { background: rgba(16, 185, 129, 0.2); color: var(--green-mint); border: 1px solid var(--green-emerald); }
+.card-meta.purple { background: rgba(192, 132, 252, 0.2); color: var(--vivid-purple); border: 1px solid var(--vivid-purple); }
+
 .card-link {
     margin-top: auto;
-    color: var(--gold-primary);
+    color: var(--vivid-blue);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .card-link:hover {
@@ -1002,7 +983,189 @@ body {
 }
 
 /* ===================================================================
-   TIMELINE ITINERARY (Ceremony Protocol)
+   DRESS CODE GRAPHIC SHOWCASE (Photos for Boys & Girls)
+   =================================================================== */
+
+.dresscode-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.attire-visual-card {
+    background: rgba(5, 22, 13, 0.85);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--gold-border);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}
+
+.attire-visual-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.3);
+}
+
+.boys-theme { border-top: 5px solid var(--gold-primary); }
+.girls-theme { border-top: 5px solid #ffffff; }
+
+.attire-image-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #000;
+}
+
+.attire-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.attire-visual-card:hover .attire-image-container img {
+    transform: scale(1.08);
+}
+
+.attire-badge-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: var(--gold-foil);
+    color: #04120a;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 6px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.saree-badge {
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    color: #04120a;
+}
+
+.attire-details {
+    padding: 24px;
+}
+
+.attire-details h3 {
+    font-family: var(--font-editorial);
+    font-size: 1.45rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.attire-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.attire-chip {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.attire-chip i {
+    color: var(--green-mint);
+    font-size: 0.85rem;
+}
+
+.highlight-chip {
+    background: rgba(245, 192, 66, 0.18);
+    border-color: var(--gold-primary);
+    color: var(--gold-light);
+}
+
+.highlight-chip i {
+    color: var(--gold-primary);
+}
+
+.saree-chip {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.attire-note {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ===================================================================
+   PHOTOGRAPHY ZONES SECTION (Colourful Extra Graphic Feature)
+   =================================================================== */
+
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.zone-card {
+    background: rgba(5, 22, 13, 0.7);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 16px;
+    padding: 24px 18px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.zone-card:hover {
+    background: rgba(16, 52, 36, 0.9);
+    border-color: var(--gold-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.zone-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(245, 192, 66, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--gold-primary);
+    margin: 0 auto 14px auto;
+    border: 1px solid var(--gold-border);
+}
+
+.zone-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.zone-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ===================================================================
+   TIMELINE ITINERARY
    =================================================================== */
 
 .timeline {
@@ -1016,7 +1179,7 @@ body {
     content: '';
     position: absolute;
     width: 2px;
-    background: linear-gradient(180deg, var(--gold-primary) 0%, rgba(230, 183, 73, 0.15) 100%);
+    background: linear-gradient(180deg, var(--green-emerald) 0%, var(--gold-primary) 50%, rgba(16, 185, 129, 0.1) 100%);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -1029,21 +1192,14 @@ body {
     width: 50%;
 }
 
-.timeline-item.left {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item.right {
-    left: 50%;
-    text-align: left;
-}
+.timeline-item.left { left: 0; text-align: right; }
+.timeline-item.right { left: 50%; text-align: left; }
 
 .timeline-dot {
     position: absolute;
     width: 38px;
     height: 38px;
-    background: #061911;
+    background: #04180e;
     border: 2px solid var(--gold-primary);
     top: 15px;
     border-radius: 50%;
@@ -1060,38 +1216,22 @@ body {
 .timeline-item.right .timeline-dot { left: -19px; }
 
 .timeline-content {
-    background: rgba(6, 25, 17, 0.82);
-    border: 1px solid rgba(230, 183, 73, 0.2);
+    background: rgba(5, 22, 13, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 14px;
     padding: 20px 24px;
     transition: var(--transition);
-    position: relative;
 }
 
 .timeline-content:hover {
-    border-color: var(--gold-primary);
+    border-color: var(--green-emerald);
     transform: translateY(-3px);
 }
 
 .highlight-content {
     border: 2px solid var(--gold-primary);
-    background: rgba(230, 183, 73, 0.12);
-    box-shadow: 0 0 30px rgba(230, 183, 73, 0.25);
-}
-
-.ribbon-mini {
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    background: var(--gold-foil);
-    color: #03100a;
-    font-family: var(--font-stamp);
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    padding: 2px 10px;
-    border-radius: 3px;
-    transform: rotate(2deg);
+    background: rgba(245, 192, 66, 0.12);
+    box-shadow: 0 0 30px rgba(245, 192, 66, 0.25);
 }
 
 .time-stamp {
@@ -1104,8 +1244,8 @@ body {
 }
 
 .gold-tag {
-    background: var(--gold-primary);
-    color: #03100a;
+    background: var(--gold-foil);
+    color: #04120a;
     padding: 3px 12px;
     border-radius: 20px;
     font-weight: 800;
@@ -1124,146 +1264,6 @@ body {
 }
 
 /* ===================================================================
-   DRESS CODE SHOWCASE (Boys, Girls & Dignitaries)
-   =================================================================== */
-
-.dresscode-showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.dress-card {
-    background: rgba(6, 25, 17, 0.82);
-    border: 1px solid rgba(230, 183, 73, 0.25);
-    border-radius: 18px;
-    padding: 26px;
-    position: relative;
-    transition: var(--transition);
-}
-
-.gentlemen-card {
-    border-top: 4px solid var(--gold-secondary);
-}
-
-.ladies-card {
-    border-top: 4px solid #ffffff;
-}
-
-.dignitary-note-card {
-    grid-column: span 2;
-    background: rgba(16, 52, 38, 0.8);
-    border: 1px solid var(--gold-primary);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.dress-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgba(230, 183, 73, 0.2);
-}
-
-.dress-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    background: rgba(230, 183, 73, 0.15);
-    border: 1px solid var(--gold-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: var(--gold-primary);
-}
-
-.dress-for-tag {
-    font-family: var(--font-stamp);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: var(--gold-light);
-    font-weight: 700;
-}
-
-.dress-for-tag.gold {
-    color: var(--gold-primary);
-}
-
-.dress-header h3 {
-    font-family: var(--font-editorial);
-    font-size: 1.35rem;
-    color: #ffffff;
-}
-
-.dress-checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.dress-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.dress-item i {
-    color: var(--gold-primary);
-    font-size: 1rem;
-    margin-top: 3px;
-}
-
-.dress-item strong {
-    display: block;
-    font-size: 0.95rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.dress-item span {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-}
-
-.optional-item {
-    border: 1px dashed var(--gold-border);
-    background: rgba(230, 183, 73, 0.08);
-}
-
-.optional-item em {
-    color: var(--gold-light);
-    font-style: italic;
-}
-
-.main-saree-item {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.main-saree-item strong {
-    font-size: 1.1rem;
-    color: var(--gold-light);
-}
-
-.dignitary-dress-body {
-    font-family: var(--font-editorial);
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--text-parchment);
-}
-
-.dignitary-dress-body i {
-    color: var(--gold-primary);
-    margin-right: 6px;
-}
-
-/* ===================================================================
    ACTIONS BANNER & MODAL
    =================================================================== */
 
@@ -1274,7 +1274,7 @@ body {
 
 .stamp-pill {
     display: inline-block;
-    background: rgba(230, 183, 73, 0.12);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(245, 192, 66, 0.2));
     border: 1px solid var(--gold-border);
     color: var(--gold-light);
     font-family: var(--font-stamp);
@@ -1321,25 +1321,24 @@ body {
 
 .primary-action-btn {
     background: var(--gold-foil);
-    color: #03100a;
+    color: #04120a;
     border: none;
-    box-shadow: 0 4px 15px rgba(230, 183, 73, 0.4);
+    box-shadow: 0 4px 15px rgba(245, 192, 66, 0.4);
 }
 
 .primary-action-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(230, 183, 73, 0.6);
+    box-shadow: 0 8px 25px rgba(245, 192, 66, 0.6);
 }
 
 .secondary-action-btn {
-    background: rgba(230, 183, 73, 0.12);
+    background: rgba(16, 185, 129, 0.15);
     color: #ffffff;
-    border: 1px solid var(--gold-border);
+    border: 1px solid var(--green-emerald);
 }
 
 .secondary-action-btn:hover {
-    background: rgba(230, 183, 73, 0.25);
-    border-color: var(--gold-primary);
+    background: rgba(16, 185, 129, 0.3);
     transform: translateY(-2px);
 }
 
@@ -1371,7 +1370,7 @@ body {
 .modal-overlay.hidden { display: none; }
 
 .modal-card {
-    background: #061e14;
+    background: #061f14;
     border: 2px solid var(--gold-primary);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
     border-radius: 22px;
@@ -1406,8 +1405,8 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: rgba(230, 183, 73, 0.16);
-    border: 1px solid var(--gold-border);
+    background: rgba(16, 185, 129, 0.18);
+    border: 1px solid var(--green-emerald);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1446,7 +1445,7 @@ body {
     width: 100%;
     padding: 12px 14px;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(230, 183, 73, 0.3);
+    border: 1px solid rgba(245, 192, 66, 0.3);
     border-radius: 8px;
     color: #ffffff;
     font-family: var(--font-sans);
@@ -1461,7 +1460,7 @@ body {
 }
 
 .form-group select option {
-    background: #061e14;
+    background: #061f14;
     color: #ffffff;
 }
 
@@ -1469,7 +1468,7 @@ body {
     width: 100%;
     margin-top: 10px;
     background: var(--gold-foil);
-    color: #03100a;
+    color: #04120a;
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 0.98rem;
@@ -1481,13 +1480,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(230, 183, 73, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 192, 66, 0.3);
     transition: var(--transition);
 }
 
 .submit-rsvp-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(230, 183, 73, 0.6);
+    box-shadow: 0 8px 25px rgba(245, 192, 66, 0.6);
 }
 
 .success-message {
@@ -1615,19 +1614,18 @@ body {
         font-size: 1.9rem;
     }
 
-    .dignitary-roles {
-        font-size: 1rem;
+    .polaroid-wrapper {
+        gap: 15px;
     }
 
-    .dresscode-showcase {
+    .polaroid-card {
+        width: 280px;
+    }
+
+    .dresscode-visual-grid {
         grid-template-columns: 1fr;
     }
 
-    .dignitary-note-card {
-        grid-column: span 1;
-    }
-
-    /* Single column timeline */
     .timeline::after {
         left: 20px;
     }
