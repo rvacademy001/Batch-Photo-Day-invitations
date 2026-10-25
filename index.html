@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Invitation | Batch Photo 2023 - Department of Social Sciences</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Canvas for Ambient Sparkles -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Sound Control Floating Button -->
+    <button id="sound-btn" class="floating-btn sound-toggle" title="Toggle Sound Effect">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <!-- Confetti Party Button -->
+    <button id="confetti-btn" class="floating-btn confetti-toggle" title="Celebrate!">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <span>Celebrate</span>
+    </button>
+
+    <!-- INTRO ENVELOPE / REVEAL SCREEN -->
+    <div id="envelope-overlay" class="envelope-overlay">
+        <div class="envelope-wrapper">
+            <div class="envelope-container" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-pocket">
+                    <div class="wax-seal" id="wax-seal">
+                        <div class="seal-inner">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="letter-preview">
+                    <div class="preview-crest">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3>Faculty of Humanities & Social Sciences</h3>
+                    <p class="preview-sub">The Open University of Sri Lanka</p>
+                    <div class="preview-badge">Batch Photograph 2023</div>
+                </div>
+            </div>
+            <div class="open-instruction">
+                <button id="open-card-btn" class="glow-button">
+                    <i class="fa-solid fa-envelope-open-text"></i> Open Official Invitation
+                </button>
+                <p class="instruction-text">Click to unfold your graduation memory</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN INVITATION CONTENT -->
+    <main id="main-content" class="main-content hidden">
+        <!-- Hero Section / Invitation Header -->
+        <header class="invite-header">
+            <div class="institution-branding">
+                <div class="emblem-container">
+                    <div class="emblem-ring">
+                        <i class="fa-solid fa-building-columns university-icon"></i>
+                    </div>
+                </div>
+                <h4 class="uni-name">The Open University of Sri Lanka</h4>
+                <h3 class="faculty-name">Faculty of Humanities & Social Sciences</h3>
+                <div class="society-tag">
+                    <span>Organized by the FHSS Students' Union</span>
+                </div>
+            </div>
+
+            <div class="invitation-lead">
+                <p class="formal-salutation">Cordially Invites You to</p>
+                <h1 class="main-title">
+                    <span class="gradient-text">GRAND BATCH PHOTOGRAPH</span>
+                    <span class="year-badge">CLASS OF 2023</span>
+                </h1>
+                <div class="dept-badge">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <span>Department of Social Sciences</span>
+                </div>
+                <p class="motto">"Freezing a milestone of perseverance, camaraderie, and academic brilliance into eternity."</p>
+            </div>
+        </header>
+
+        <!-- Countdown Timer Section -->
+        <section class="section-container countdown-section">
+            <h2 class="section-title">
+                <i class="fa-regular fa-clock"></i> Counting Down To The Big Day
+            </h2>
+            <div class="countdown-grid" id="countdown">
+                <div class="countdown-card">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-card">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-card">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-card">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <div class="event-status-pill">
+                <span class="pulse-dot"></span>
+                <span>Mark your calendar for December 13th</span>
+            </div>
+        </section>
+
+        <!-- Event Details Cards -->
+        <section class="section-container details-section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-circle-info"></i> Event Particulars
+            </h2>
+            <div class="details-grid">
+                <!-- Date -->
+                <div class="detail-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <h3>Date</h3>
+                    <p class="card-primary">December 13</p>
+                    <p class="card-secondary">Saturday Morning</p>
+                    <span class="card-meta">Official Photography Session</span>
+                </div>
+
+                <!-- Venue -->
+                <div class="detail-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3>Venue</h3>
+                    <p class="card-primary">Nawala Main Centre</p>
+                    <p class="card-secondary">The Open University of Sri Lanka</p>
+                    <a href="https://maps.google.com/?q=The+Open+University+of+Sri+Lanka+Nawala" target="_blank" class="card-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps
+                    </a>
+                </div>
+
+                <!-- Time -->
+                <div class="detail-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3>Reporting Time</h3>
+                    <p class="card-primary">08:00 AM</p>
+                    <p class="card-secondary">Sessions start sharply at 08:30 AM</p>
+                    <span class="card-meta">Please maintain punctuality</span>
+                </div>
+
+                <!-- Eligibility -->
+                <div class="detail-card">
+                    <div class="card-icon-box">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3>Delegates</h3>
+                    <p class="card-primary">Batch of 2023</p>
+                    <p class="card-secondary">Dept. of Social Sciences</p>
+                    <span class="card-meta">Faculty of Humanities & Social Sciences</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary / Schedule Section -->
+        <section class="section-container timeline-section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-list-check"></i> Program Itinerary
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-door-open"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">08:00 AM – 08:45 AM</span>
+                        <h4>Arrival & Registration</h4>
+                        <p>Welcome check-in, distribution of token numbers, and light networking at the reception booth.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">08:45 AM – 09:30 AM</span>
+                        <h4>Robing & Assembly</h4>
+                        <p>Wardrobe final checks, assembly arrangement, and brief instructions from the coordinating team.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-camera-retro"></i></div>
+                    <div class="timeline-content highlight-content">
+                        <span class="time-stamp gold-tag">09:30 AM – 11:30 AM</span>
+                        <h4>The Grand Official Batch Photograph</h4>
+                        <p>The landmark group portrait including respected faculty deans, department heads, lecturers, and the entire 2023 batch.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">11:30 AM – 01:00 PM</span>
+                        <h4>Sub-Group & Friendship Photo Booths</h4>
+                        <p>Special department portraits, personal keepsake captures with peers, and memory photo sessions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-mug-hot"></i></div>
+                    <div class="timeline-content">
+                        <span class="time-stamp">01:00 PM Onwards</span>
+                        <h4>Fellowship & Refreshments</h4>
+                        <p>Celebratory refreshments and bonding before parting ways with everlasting memories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dress Code & Guidelines -->
+        <section class="section-container guidelines-section">
+            <h2 class="section-title">
+                <i class="fa-solid fa-shirt"></i> Attire & Photo Etiquette
+            </h2>
+            <div class="guidelines-grid">
+                <div class="guide-box">
+                    <div class="guide-header">
+                        <i class="fa-solid fa-vest-patches"></i>
+                        <h4>Attire Recommendation</h4>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> <strong>Gentlemen:</strong> Formal Western attire (Dark suit / Formal shirt with tie & trousers with formal shoes).</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Ladies:</strong> Elegant Saree / Formal western dress or formal trouser suit.</li>
+                        <li><i class="fa-solid fa-check"></i> Coordinated, dignified color tones (Navy, Black, Maroon, Cream, or Royal hues recommended).</li>
+                    </ul>
+                </div>
+                <div class="guide-box">
+                    <div class="guide-header">
+                        <i class="fa-solid fa-bell"></i>
+                        <h4>Important Instructions</h4>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-id-card"></i> Carry your Student Identity Card for smooth verification.</li>
+                        <li><i class="fa-solid fa-clock"></i> Kindly be seated on time to maintain the photographic lighting and schedule.</li>
+                        <li><i class="fa-solid fa-mobile-screen-button"></i> Mobile phones must be kept on silent mode during official group shots.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quick Actions (Calendar, Directions, RSVP) -->
+        <section class="section-container actions-section">
+            <div class="action-banner">
+                <h3>Save This Unforgettable Moment</h3>
+                <p>Sync with your digital calendar so you don't miss a single second.</p>
+                <div class="button-group">
+                    <a id="google-calendar-btn" target="_blank" class="primary-action-btn">
+                        <i class="fa-brands fa-google"></i> Add to Google Calendar
+                    </a>
+                    <button id="open-rsvp-btn" class="secondary-action-btn">
+                        <i class="fa-solid fa-clipboard-check"></i> RSVP Confirmation
+                    </button>
+                    <button id="share-btn" class="tertiary-action-btn">
+                        <i class="fa-solid fa-share-nodes"></i> Share Invite
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Modal -->
+        <div id="rsvp-modal" class="modal-overlay hidden">
+            <div class="modal-card">
+                <button class="modal-close" id="close-rsvp">&times;</button>
+                <div class="modal-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3>RSVP for Batch Photo 2023</h3>
+                <p class="modal-subtitle">Confirm your presence with the FHSS Students' Union</p>
+
+                <form id="rsvp-form">
+                    <div class="form-group">
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" required placeholder="e.g. Nimasha Perera">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-id">Student Registration Number</label>
+                        <input type="text" id="student-id" required placeholder="e.g. S92345678">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">WhatsApp / Phone Number</label>
+                        <input type="tel" id="contact-phone" required placeholder="e.g. 077 123 4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="diet-pref">Will you be attending?</label>
+                        <select id="diet-pref">
+                            <option value="yes">Yes, Definitely! Proudly Attending 🎉</option>
+                            <option value="maybe">Uncertain / Tentative</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-rsvp-btn">
+                        <i class="fa-solid fa-circle-check"></i> Confirm Attendance
+                    </button>
+                </form>
+                <div id="rsvp-success-msg" class="success-message hidden">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <h4>Reservation Confirmed!</h4>
+                    <p>We look forward to capturing timeless memories together on December 13th at OUSL Nawala.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="invite-footer">
+            <div class="footer-crest">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <p class="organized-by">Organized with pride by</p>
+            <h4>Students' Union — Faculty of Humanities & Social Sciences</h4>
+            <p class="uni-tag">The Open University of Sri Lanka • Nawala, Nugegoda</p>
+            <div class="footer-divider"></div>
+            <p class="copy-text">Batch of 2023 • Department of Social Sciences • All Rights Reserved</p>
+        </footer>
+    </main>
+
+    <!-- Audio synthesizer elements via script -->
+    <script src="script.js"></script>
+</body>
+</html>
