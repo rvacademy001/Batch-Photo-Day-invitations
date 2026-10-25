@@ -1,6 +1,8 @@
 /* ===================================================================
-   BATCH PHOTOGRAPH 2023 - OFFICIAL INVITATION SCRIPT
+   VIP CEREMONIAL INVITATION - JAVASCRIPT
    Faculty of Humanities & Social Sciences | OUSL Nawala
+   Theme: Royal Emerald Green & Imperial Gold
+   Event Date: December 13, 2026 at 7:00 AM
    =================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ===================================================================
-   1. SOUND SYNTHESIZER (Web Audio API - Zero external assets needed)
+   1. SOUND SYNTHESIZER (Web Audio API - Elegant Brass & Harp Chimes)
    =================================================================== */
 let soundEnabled = true;
 let audioCtx = null;
@@ -33,36 +35,36 @@ function getAudioContext() {
     return audioCtx;
 }
 
-// Plays an elegant celebratory arpeggio chord (Ethereal chime)
+// Royal ceremonial arpeggio (C major 9 / Pentatonic chime)
 function playCelebrationFanfare() {
     if (!soundEnabled) return;
     try {
         const ctx = getAudioContext();
         if (!ctx) return;
 
-        // F major 9 pentatonic arpeggio notes (F4, A4, C5, E5, G5, C6)
-        const notes = [349.23, 440.00, 523.25, 659.25, 783.99, 1046.50];
+        // Frequencies for a noble academic harp chime: C4, G4, C5, E5, G5, B5, C6
+        const notes = [261.63, 392.00, 523.25, 659.25, 783.99, 987.77, 1046.50];
         const now = ctx.currentTime;
 
         notes.forEach((freq, idx) => {
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
 
-            osc.type = 'triangle';
-            osc.frequency.setValueAtTime(freq, now + idx * 0.12);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now + idx * 0.1);
 
-            gain.gain.setValueAtTime(0, now + idx * 0.12);
-            gain.gain.linearRampToValueAtTime(0.2, now + idx * 0.12 + 0.05);
-            gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.12 + 1.6);
+            gain.gain.setValueAtTime(0, now + idx * 0.1);
+            gain.gain.linearRampToValueAtTime(0.18, now + idx * 0.1 + 0.04);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.1 + 1.8);
 
             osc.connect(gain);
             gain.connect(ctx.destination);
 
-            osc.start(now + idx * 0.12);
-            osc.stop(now + idx * 0.12 + 1.8);
+            osc.start(now + idx * 0.1);
+            osc.stop(now + idx * 0.1 + 2.0);
         });
     } catch (e) {
-        console.warn('Audio playback not permitted yet:', e);
+        console.warn('Audio playback note:', e);
     }
 }
 
@@ -100,19 +102,19 @@ function initEnvelopeReveal() {
         if (isOpened) return;
         isOpened = true;
 
-        // Trigger Audio Chime
+        // Sound chime
         playCelebrationFanfare();
 
         // Animate envelope
         envelope.classList.add('open');
 
-        // Confetti burst from envelope
+        // Gold & Emerald confetti burst
         if (typeof confetti === 'function') {
             confetti({
-                particleCount: 80,
-                spread: 70,
+                particleCount: 90,
+                spread: 75,
                 origin: { y: 0.6 },
-                colors: ['#f5c042', '#ffd366', '#ffffff', '#1e50a0']
+                colors: ['#e6b749', '#10b981', '#059669', '#ffd700', '#ffffff']
             });
         }
 
@@ -121,10 +123,9 @@ function initEnvelopeReveal() {
             overlay.classList.add('hide-envelope');
             mainContent.classList.remove('hidden');
 
-            // Grand confetti shower
+            // Ceremonial grand shower
             fireGrandCelebration();
 
-            // Smooth scroll to top of main content
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }, 1100);
     }
@@ -140,15 +141,15 @@ function initEnvelopeReveal() {
 }
 
 /* ===================================================================
-   3. CELEBRATORY CONFETTI EFFECTS
+   3. CELEBRATORY GOLD & EMERALD CONFETTI
    =================================================================== */
 function fireGrandCelebration() {
     if (typeof confetti !== 'function') return;
 
-    const count = 200;
+    const count = 220;
     const defaults = {
         origin: { y: 0.7 },
-        colors: ['#f5c042', '#e6a71e', '#ffd700', '#ffffff', '#2563eb', '#38bdf8']
+        colors: ['#e6b749', '#10b981', '#047857', '#ffd700', '#ffffff', '#22c55e']
     };
 
     function fire(particleRatio, opts) {
@@ -157,11 +158,11 @@ function fireGrandCelebration() {
         }));
     }
 
-    fire(0.25, { spread: 26, startVelocity: 55 });
-    fire(0.2, { spread: 60 });
-    fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
-    fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
-    fire(0.1, { spread: 120, startVelocity: 45 });
+    fire(0.25, { spread: 28, startVelocity: 55 });
+    fire(0.2, { spread: 65 });
+    fire(0.35, { spread: 105, decay: 0.91, scalar: 0.85 });
+    fire(0.1, { spread: 130, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+    fire(0.1, { spread: 130, startVelocity: 45 });
 }
 
 function initConfettiButton() {
@@ -175,7 +176,7 @@ function initConfettiButton() {
 }
 
 /* ===================================================================
-   4. DYNAMIC COUNTDOWN TIMER
+   4. DYNAMIC COUNTDOWN TIMER (Exact: Dec 13, 2026 at 07:00 AM)
    =================================================================== */
 function initCountdownTimer() {
     const daysEl = document.getElementById('days');
@@ -185,21 +186,12 @@ function initCountdownTimer() {
 
     if (!daysEl) return;
 
-    // Target Date: December 13th at 08:30:00 AM
-    const currentYear = new Date().getFullYear();
-    let targetYear = currentYear;
-    
-    // Check if Dec 13 of this year has already passed
-    const candidateDate = new Date(`December 13, ${currentYear} 08:30:00`);
-    if (new Date().getTime() > candidateDate.getTime()) {
-        targetYear = currentYear + 1;
-    }
-
-    const eventDate = new Date(`December 13, ${targetYear} 08:30:00`).getTime();
+    // Exact event date requested: December 13, 2026 at 7:00:00 AM
+    const targetDate = new Date("December 13, 2026 07:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
-        const distance = eventDate - now;
+        const distance = targetDate - now;
 
         if (distance <= 0) {
             daysEl.innerText = '00';
@@ -225,35 +217,28 @@ function initCountdownTimer() {
 }
 
 /* ===================================================================
-   5. GOOGLE CALENDAR LINK GENERATION
+   5. GOOGLE CALENDAR LINK (Dec 13, 2026 at 7:00 AM)
    =================================================================== */
 function initCalendarLink() {
     const calBtn = document.getElementById('google-calendar-btn');
     if (!calBtn) return;
 
-    const currentYear = new Date().getFullYear();
-    let targetYear = currentYear;
-    const candidateDate = new Date(`December 13, ${currentYear} 08:30:00`);
-    if (new Date().getTime() > candidateDate.getTime()) {
-        targetYear = currentYear + 1;
-    }
-
-    const title = encodeURIComponent("Batch Photograph 2023 - Department of Social Sciences (OUSL)");
+    const title = encodeURIComponent("Ceremonial Batch Photograph 2023 - Department of Social Sciences (OUSL)");
     const details = encodeURIComponent(
-        "Official Grand Batch Photograph of the 2023 Batch, Department of Social Sciences, Faculty of Humanities & Social Sciences, The Open University of Sri Lanka.\n\nOrganized by the FHSS Students' Union."
+        "Official Ceremonial Invitation to the Grand Batch Photograph 2023.\n\nHonoring: Respected Vice-Chancellor, Dean of FHSS, Heads of Departments, and Academic Staff.\nHost: Faculty of Humanities & Social Sciences Students' Union & The Batch of 2023, Department of Social Sciences.\n\nDate: December 13, 2026\nTime: 7:00 AM Sharp\nVenue: HSS Faculty Premises, The Open University of Sri Lanka, Nawala."
     );
-    const location = encodeURIComponent("The Open University of Sri Lanka, Nawala, Nugegoda");
+    const location = encodeURIComponent("Faculty of Humanities and Social Sciences, The Open University of Sri Lanka, Nawala");
 
-    // Format ISO string for Google Calendar (YYYYMMDDTHHMMSS)
-    const startDate = `${targetYear}1213T083000`;
-    const endDate = `${targetYear}1213T140000`;
+    // December 13, 2026 from 07:00 AM to 01:00 PM
+    const startDate = "20261213T070000";
+    const endDate = "20261213T130000";
 
     const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
     calBtn.setAttribute('href', gcalUrl);
 }
 
 /* ===================================================================
-   6. RSVP MODAL & SUBMISSION
+   6. DIGNITARY RSVP MODAL & SUBMISSION
    =================================================================== */
 function initRSVPModal() {
     const openBtn = document.getElementById('open-rsvp-btn');
@@ -282,34 +267,32 @@ function initRSVPModal() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const role = document.getElementById('dignitary-role').value;
             const name = document.getElementById('student-name').value;
-            const studentId = document.getElementById('student-id').value;
             const phone = document.getElementById('contact-phone').value;
             const attending = document.getElementById('diet-pref').value;
 
-            // Save confirmation locally
-            const rsvpData = { name, studentId, phone, attending, timestamp: new Date().toISOString() };
+            // Save RSVP locally
+            const rsvpData = { role, name, phone, attending, timestamp: new Date().toISOString() };
             try {
-                localStorage.setItem('ousl_rsvp_2023', JSON.stringify(rsvpData));
+                localStorage.setItem('ousl_dignitary_rsvp_2026', JSON.stringify(rsvpData));
             } catch (err) {
                 console.log(err);
             }
 
-            // Show success state
             form.style.display = 'none';
             successMsg.classList.remove('hidden');
 
-            // Celebration effect
             playCelebrationFanfare();
             if (typeof confetti === 'function') {
                 confetti({
-                    particleCount: 100,
-                    spread: 80,
-                    origin: { y: 0.5 }
+                    particleCount: 120,
+                    spread: 85,
+                    origin: { y: 0.5 },
+                    colors: ['#e6b749', '#10b981', '#ffd700', '#ffffff']
                 });
             }
 
-            // Auto-close after 3.5 seconds
             setTimeout(() => {
                 modal.classList.add('hidden');
                 setTimeout(() => {
@@ -317,13 +300,13 @@ function initRSVPModal() {
                     form.reset();
                     successMsg.classList.add('hidden');
                 }, 500);
-            }, 3500);
+            }, 3800);
         });
     }
 }
 
 /* ===================================================================
-   7. SHARE INVITATION BUTTON
+   7. SHARE INVITATION LINK
    =================================================================== */
 function initShareButton() {
     const shareBtn = document.getElementById('share-btn');
@@ -331,8 +314,8 @@ function initShareButton() {
 
     shareBtn.addEventListener('click', async () => {
         const shareData = {
-            title: "Batch Photograph 2023 | Department of Social Sciences - OUSL",
-            text: "You are cordially invited to the Grand Batch Photograph 2023 of the Department of Social Sciences, Faculty of Humanities & Social Sciences - OUSL Nawala on December 13th!",
+            title: "VIP Invitation: Grand Batch Photograph 2023 | FHSS - OUSL",
+            text: "Official Dignitary Invitation: You are respectfully invited to grace the Ceremonial Batch Photograph 2023 of the Department of Social Sciences, Faculty of Humanities & Social Sciences, The Open University of Sri Lanka on December 13, 2026 at 7:00 AM at the HSS Faculty Premises.",
             url: window.location.href
         };
 
@@ -340,10 +323,9 @@ function initShareButton() {
             try {
                 await navigator.share(shareData);
             } catch (err) {
-                console.log('Share dismissed or cancelled');
+                console.log('Share dismissed');
             }
         } else {
-            // Fallback: Copy to clipboard
             try {
                 await navigator.clipboard.writeText(window.location.href);
                 const originalText = shareBtn.innerHTML;
@@ -352,14 +334,14 @@ function initShareButton() {
                     shareBtn.innerHTML = originalText;
                 }, 2500);
             } catch (e) {
-                alert("Invite link: " + window.location.href);
+                alert("Invitation URL: " + window.location.href);
             }
         }
     });
 }
 
 /* ===================================================================
-   8. AMBIENT BACKGROUND PARTICLES (Canvas)
+   8. AMBIENT EMERALD & GOLD DUST PARTICLES (Canvas)
    =================================================================== */
 function initAmbientParticles() {
     const canvas = document.getElementById('ambient-canvas');
@@ -375,9 +357,9 @@ function initAmbientParticles() {
     });
 
     const particles = [];
-    const particleCount = Math.min(Math.floor(width / 20), 45);
+    const particleCount = Math.min(Math.floor(width / 22), 48);
 
-    class Sparkle {
+    class DustParticle {
         constructor() {
             this.reset();
         }
@@ -385,12 +367,21 @@ function initAmbientParticles() {
         reset() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.size = Math.random() * 2 + 0.8;
-            this.speedY = -(Math.random() * 0.4 + 0.15);
-            this.speedX = (Math.random() - 0.5) * 0.3;
-            this.opacity = Math.random() * 0.6 + 0.2;
-            this.fadeSpeed = Math.random() * 0.008 + 0.003;
-            this.color = Math.random() > 0.35 ? '245, 192, 66' : '255, 255, 255';
+            this.size = Math.random() * 2.2 + 0.8;
+            this.speedY = -(Math.random() * 0.45 + 0.12);
+            this.speedX = (Math.random() - 0.5) * 0.35;
+            this.opacity = Math.random() * 0.65 + 0.2;
+            this.fadeSpeed = Math.random() * 0.007 + 0.003;
+
+            // Color alternates between Imperial Gold and Emerald Sparkle
+            const rand = Math.random();
+            if (rand > 0.55) {
+                this.color = '230, 183, 73'; // Imperial Gold
+            } else if (rand > 0.25) {
+                this.color = '16, 185, 129'; // Emerald Green
+            } else {
+                this.color = '255, 255, 255'; // Diamond Star
+            }
         }
 
         update() {
@@ -408,14 +399,14 @@ function initAmbientParticles() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
-            ctx.shadowBlur = 8;
-            ctx.shadowColor = `rgba(${this.color}, 0.8)`;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = `rgba(${this.color}, 0.85)`;
             ctx.fill();
         }
     }
 
     for (let i = 0; i < particleCount; i++) {
-        particles.push(new Sparkle());
+        particles.push(new DustParticle());
     }
 
     function animate() {
